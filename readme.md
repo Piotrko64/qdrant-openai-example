@@ -1,7 +1,7 @@
 # Qdrant and OpenAI Integration Project
 
 
-<div align="center"><img src="https://openai.com/favicon.ico"/>  <img width="200" height="48" src="https://qdrant.tech/img/brand-resources-logos/logo-red-white.svg"/>
+<div align="center"><img height="50" src="https://static.vecteezy.com/system/resources/previews/022/227/364/non_2x/openai-chatgpt-logo-icon-free-png.png"/>  <img width="200" height="48" src="https://qdrant.tech/img/brand-resources-logos/logo-red-white.svg"/>
 <img height="48" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png"/>
 
 </div>
