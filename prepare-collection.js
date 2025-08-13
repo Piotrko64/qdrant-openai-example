@@ -1,15 +1,10 @@
-require("dotenv").config();
-const fs = require("fs");
-const { QdrantClient } = require("@qdrant/js-client-rest");
-const { OpenAI } = require("openai");
-const { v4: uuidv4 } = require("uuid");
-const { COLLENTION_NAME, TEXT_TO_EMBEDDING } = require("./config");
-
-const qdrant = new QdrantClient({
-  url: process.env.QDRANT_URL,
-  apiKey: process.env.QDRANT_KEY,
-});
-const openai = new OpenAI({ apiKey: process.env.OPENAI_KEY });
+import "dotenv/config";
+import fs from "fs";
+import OpenAI from "openai";
+import { v4 as uuidv4 } from "uuid";
+import { COLLENTION_NAME, TEXT_TO_EMBEDDING } from "./config.js";
+import { openai } from "./helpers/openai-init.js";
+import { qdrant } from "./helpers/qdrant-init.js";
 
 function chunkTextWithOverlap(text, chunkSize = 600, overlap = 100) {
   const paragraphs = text

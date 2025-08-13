@@ -1,14 +1,9 @@
-require("dotenv").config();
-const readline = require("readline");
-const { QdrantClient } = require("@qdrant/js-client-rest");
-const { OpenAI } = require("openai");
-const { COLLENTION_NAME } = require("./config");
+import "dotenv/config";
+import readline from "readline";
+import { COLLENTION_NAME } from "./config.js";
+import { openai } from "./helpers/openai-init.js";
+import { qdrant } from "./helpers/qdrant-init.js";
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_KEY });
-const qdrant = new QdrantClient({
-  url: process.env.QDRANT_URL,
-  apiKey: process.env.QDRANT_KEY,
-});
 async function getRelevantContext(question) {
   const embedding = await openai.embeddings.create({
     model: "text-embedding-3-small",

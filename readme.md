@@ -41,9 +41,9 @@ https://qdrant.tech/pricing
 
 ## Files Overview
 
-- **`index.js`**: Responsible for loading text from a file, chunking the text with overlap, creating a collection in Qdrant if it doesn't exist, generating vectors using OpenAI, and saving them in Qdrant.
+- **`prepare-collection.js`**: Responsible for loading text from a file, chunking the text with overlap, creating a collection in Qdrant if it doesn't exist, generating vectors using OpenAI, and saving them in Qdrant.
 
-- **`rag.js`**: Handles user input for questions, generates a vector for the question using OpenAI, retrieves relevant context from Qdrant, and generates an answer based on that context.
+- **`rag-search.js`**: Handles user input for questions, generates a vector for the question using OpenAI, retrieves relevant context from Qdrant, and generates an answer based on that context.
 
 
 
